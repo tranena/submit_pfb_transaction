@@ -19,7 +19,7 @@ $(function () {
             method: 'POST',
             data: $(this).serialize(),
             success: function (result) {
-                $('#tx_result').html("Submit Success");
+                $('#tx_result').html("<span style='color:green'>Submit Success</span>");
                 const result_json = JSON.parse(result)
                 console.log(result)
                 $('#height').html(result_json["height"]);
@@ -29,7 +29,7 @@ $(function () {
                 $('#tx_info').show();
             },
             error: function (error) {
-                $('#tx_result').html("Failed,Please make sure your node is available and try again!");
+                $('#tx_result').html("<span style='color:red'>Failed,Please make sure your node is available and try again!</span>");
             }
         });
     });
