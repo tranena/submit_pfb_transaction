@@ -26,13 +26,11 @@ app.post('/', (req, res) => {
             try {
                 const parsedOutput = JSON.parse(stdout);
 
-                const { height, txhash, gas_wanted, gas_used } = parsedOutput;
+                const { height, txhash} = parsedOutput;
 
                 const result = {
                     height: height,
                     txhash: txhash,
-                    gas_wanted: gas_wanted,
-                    gas_used: gas_used,
                 };
                 console.log(result)
                 res.status(200).send(JSON.stringify(result, null, 2))

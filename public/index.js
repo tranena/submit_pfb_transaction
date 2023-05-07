@@ -24,8 +24,6 @@ $(function () {
                 console.log(result)
                 $('#height').html(result_json["height"]);
                 $('#txhash').html("<a target='_blank' href='https://testnet.mintscan.io/celestia-incentivized-testnet/txs/" + result_json["txhash"] + "?height=" + result_json["height"] + "'>" + result_json["txhash"] + "</a>");
-                $('#gas_wanted').html(result_json["gas_wanted"]);
-                $('#gas_used').html(result_json["gas_used"]);
                 $('#tx_info').show();
             },
             error: function (error) {
