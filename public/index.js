@@ -21,7 +21,7 @@ $(function () {
             success: function (result) {
                 $('#tx_result').html("Submit Success");
                 const result_json = JSON.parse(result)
-                
+                console.log(result)
             },
             error: function (error) {
                 $('#tx_result').html("Failed,Please make sure your node is available and try again!");
